@@ -1,0 +1,6 @@
+{
+  "ui": "public",
+  "dist": "public/_dist",
+  "prod": "public/_prod",
+  "livereloadPort": 35004
+}

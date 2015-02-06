@@ -1,0 +1,27 @@
+aliases:
+  - 'ui-guide'
+ui-guide:
+  options:
+    data:
+      projectTitle: 'LeanIn Circles'
+      cssFiles:
+        - '/ui/_dist/common.css'
+        - '/ui/_dist/styleguide.css'
+      lessFile: 
+        file: '<%= ui %>/common/styles/vars.less'
+        paths:
+          - 'bower_components/'
+          - 'bower_components/oban/'
+          - 'bower_components/ft-ui/'
+      helpersPath: 'apps/www/lib/helpers'
+      partialsPath: 'apps/www/public/modules'
+  src:
+    - 'bower_components/ft-ui/styleguide'
+    - '<%= ui %>/modules'
+  dest: '<%= dist %>/styleguide.html'
+watch:
+  files:
+    - '<%= ui %>/modules/**/*'
+    - '<%= ui %>/common/styles/vars.less'
+  tasks:
+    - 'guide'

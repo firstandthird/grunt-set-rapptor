@@ -1,0 +1,39 @@
+aliases:
+  - 'default'
+  - 'clean:prod'
+  #- 'shell:app' #tests
+  - 'uglify:prod'
+  - 'cssmin:prod'
+  - 'hash'
+  - 'clean:prod_tmp'
+  - 'bytesize:prod'
+clean:
+  - '<%= prod %>'
+clean__tmp:
+  - '<%= prod %>/tmp'
+hash:
+  options:
+    mapping: '<%= prod %>/assets.json'
+    srcBasePath: 'apps/www/public/_prod/tmp/'
+    destBasePath: 'apps/www/public/_prod/'
+  src: '<%= prod %>/tmp/*'
+  dest: '<%= prod %>'
+uglify:
+  files:
+    - 
+      expand: true
+      src: 
+        - '*.js'
+      cwd: '<%= dist %>'
+      dest: '<%= prod %>/tmp/'
+cssmin:
+  files:
+    -
+      expand: true
+      src: 
+        - '*.css'
+      cwd: '<%= dist %>'
+      dest: '<%= prod %>/tmp/'
+bytesize:
+  src:
+    - '<%= prod %>/*'

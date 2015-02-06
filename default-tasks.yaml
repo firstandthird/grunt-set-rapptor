@@ -1,0 +1,6 @@
+aliases:
+  - 'clean:dev'
+  - 'scripts'
+  - 'styles'
+  #- 'guide'
+  - 'app'

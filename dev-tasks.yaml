@@ -1,0 +1,49 @@
+aliases:
+  - 'default'
+  - 'githooks'
+  - 'concurrent:dev'
+clean:
+  - '<%= dist %>'
+watch:
+  files:
+    - '<%= dist %>/**/*'
+    #- '<%= ui %>/**/*.html'
+    - 'index.js'
+    - 'lib/**/*.js'
+  options:
+    livereload: '<%= livereloadPort %>'
+nodemon:
+  script: 'index.js'
+  options:
+    ext: 'js,html,yaml'
+    env:
+      NODE_ENV: '<%= env %>'
+    ignore: 
+      - 'nodemon'
+      - 'bower_components/**'
+      - 'apps/*/test/**'
+      - 'node_modules/**'
+      - 'public/_dist/*.html'
+      - 'public/**/*.js'
+      - 'grunt/*.yaml'
+shell:
+  command: 'mkdir -p db && mongod --quiet --dbpath ./db'
+  options:
+    stdin: false
+concurrent:
+  tasks: 
+    - 'nodemon'
+    - 'watch'
+    - 'shell:dev'
+  options:
+    logConcurrentOutput: true
+    limit: 4
+githooks:
+  options: 
+    hashbang: '#!/bin/sh'
+    template: './node_modules/grunt-set-rapptor/node_modules/grunt-githooks/templates/shell.hb'
+    startMarker: '## START'
+    endMarker: '## END'
+  'post-merge':
+    command: 'sh'
+    taskNames: './scripts/post-merge.sh'

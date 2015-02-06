@@ -1,0 +1,41 @@
+aliases:
+  - 'less'
+  - 'autoprefixer'
+less:
+  options:
+    relativeUrls: true
+    paths:
+      - 'bower_components/'
+      - 'bower_components/oban/'
+      - 'bower_components/ft-ui/'
+      - 'bower_components/complete/less'
+      - 'bower_components/popbox/less'
+      - 'bower_components/tokens/less'
+      - '<%= ui %>/common/styles'
+  files:
+    -
+      src:
+        - '<%= ui %>/common/styles/proxima.less'
+        - '<%= ui %>/common/styles/base.less'
+        - '<%= ui %>/common/styles/*.less'
+        - '<%= ui %>/modules/**/*.less'
+      dest: '<%= dist %>/common.css'
+    -
+      src: 
+        - 'bower_components/ft-ui/lib/styleguide.less'
+      dest: '<%= dist %>/styleguide.css'
+    -
+      expand: true
+      cwd: '<%= ui %>/pages/'
+      src: ['**/*.less']
+      dest: '<%= dist %>/'
+      ext: '.css'
+      flatten: true
+autoprefixer:
+  expand: true
+  src: '<%= dist %>/**/*.css'
+watch:
+  files:
+    - '<%= ui %>/**/*.less'
+  tasks:
+    - 'styles'

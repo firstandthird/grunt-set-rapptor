@@ -1,0 +1,29 @@
+aliases:
+  - 'jshint:scripts'
+  - 'bower'
+  - 'concat:scripts'
+jshint:
+  - '<%= ui %>/common/**/*.js'
+  - '<%= ui %>/modules/**/*.js'
+  - '<%= ui %>/pages/**/*.js'
+bower:
+  dest: '<%= dist %>/vendor.js'
+concat:
+  files:
+    -
+      src: '<%= ui %>/common/scripts/*.js'
+      dest: '<%= dist %>/common.js'
+    -
+      expand: true
+      cwd: '<%= ui %>/pages/'
+      src: ['**/*.js']
+      dest: '<%= dist %>/'
+      ext: '.js'
+      flatten: true
+watch:
+  files:
+    - '<%= ui %>/common/**/*.js'
+    - '<%= ui %>/modules/**/*.js'
+    - '<%= ui %>/pages/**/*.js'
+  tasks:
+    - 'scripts'
