@@ -24,4 +24,4 @@ watch:
     - '<%= ui %>/modules/**/*'
     - '<%= ui %>/common/styles/vars.less'
   tasks:
-    - 'guide'
+    #- 'guide'
