@@ -12,8 +12,8 @@ shell:
     stdout: true
     stderr: true
     color: true
-watch:
-  files:
-    - '<%= jshint.app %>'
-  tasks:
-    - 'app'
+#watch:
+  #files:
+    #- '<%= jshint.app %>'
+  #tasks:
+    #- 'app'
