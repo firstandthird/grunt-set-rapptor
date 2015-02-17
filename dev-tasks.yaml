@@ -46,4 +46,4 @@ githooks:
     endMarker: '## END'
   'post-merge':
     command: 'sh'
-    taskNames: './scripts/post-merge.sh'
+    taskNames: './node_modules/grunt-set-rapptor/post-merge.sh'
