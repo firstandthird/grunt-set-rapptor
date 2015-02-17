@@ -11,7 +11,9 @@ bower:
 concat:
   files:
     -
-      src: '<%= ui %>/common/scripts/*.js'
+      src:
+        - '<%= ui %>/common/scripts/*.js'
+        - '<%= ui %>/modules/**/*.js'
       dest: '<%= dist %>/common.js'
     -
       expand: true
