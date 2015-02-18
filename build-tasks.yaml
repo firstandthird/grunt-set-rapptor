@@ -8,4 +8,3 @@ watch:
     reload: true
   tasks:
     - 'default'
-    - 'shell:app'
