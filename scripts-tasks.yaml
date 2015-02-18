@@ -21,7 +21,6 @@ concat:
       src: ['**/*.js']
       dest: '<%= dist %>/'
       ext: '.js'
-      flatten: true
 watch:
   files:
     - '<%= ui %>/common/**/*.js'

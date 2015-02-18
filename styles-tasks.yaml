@@ -24,7 +24,6 @@ less:
       src: ['**/*.less']
       dest: '<%= dist %>/'
       ext: '.css'
-      flatten: true
 autoprefixer:
   expand: true
   src: '<%= dist %>/**/*.css'
