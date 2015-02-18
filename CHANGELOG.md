@@ -1,4 +1,11 @@
 
+0.0.5 / 2015-02-18
+==================
+
+  * don't flatten page js/css
+  * include /modules/**/*.js in common.js
+
+
 0.0.4 / 2015-02-17
 ==================
 
