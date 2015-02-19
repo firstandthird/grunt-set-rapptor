@@ -1,0 +1,10 @@
+aliases:
+  - 'webfont'
+  - 'styles'
+webfont:
+  src: '<%= ui %>/common/icons/*.svg'
+  dest: '<%= ui %>/common/icon-font'
+  options:
+    relativeFontPath: '/ui/icon-font'
+    stylesheet: 'less'
+    syntax: 'bootstrap'
