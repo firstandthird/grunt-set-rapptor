@@ -8,3 +8,4 @@ webfont:
     relativeFontPath: '/ui/common/icon-font'
     stylesheet: 'less'
     syntax: 'bootstrap'
+    normalize: true
