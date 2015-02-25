@@ -1,0 +1,14 @@
+aliases:
+  - 'imagemin'
+  - 'bytesize'
+imagemin:
+  files:
+    -
+      expand: true
+      cwd: 'public/'
+      src: '**/*.{png,jpg}'
+      dest: 'public/'
+bytesize:
+  src:
+    - 'public/**/*.{png,jpg}'
+
