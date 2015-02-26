@@ -1,5 +1,6 @@
 {
   "ui": "public",
+  "uiRelative": "/ui",
   "dist": "public/_dist",
   "prod": "public/_prod",
   "livereloadPort": 35004
