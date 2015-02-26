@@ -1,4 +1,10 @@
 
+0.0.11 / 2015-02-26
+==================
+
+  * Added uiRelative to defaults
+  * Support configuring relative path in fonts
+
 0.0.10 / 2015-02-25
 ==================
 
