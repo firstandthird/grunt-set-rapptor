@@ -5,6 +5,6 @@ webfont:
   src: '<%= ui %>/common/icons/*.svg'
   dest: '<%= ui %>/common/icon-font'
   options:
-    relativeFontPath: '/ui/common/icon-font'
+    relativeFontPath: '<%= uiRelative %>/common/icon-font'
     stylesheet: 'less'
     syntax: 'bootstrap'
