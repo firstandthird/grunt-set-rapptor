@@ -6,7 +6,7 @@ aliases:
   - 'cssmin:prod'
   - 'hash'
   - 'clean:prod_tmp'
-  - 'bytesize:prod'
+  #- 'bytesize:prod'
 clean:
   - '<%= prod %>'
 clean__tmp:
@@ -14,16 +14,19 @@ clean__tmp:
 hash:
   options:
     mapping: '<%= prod %>/assets.json'
-    srcBasePath: 'apps/www/public/_prod/tmp/'
-    destBasePath: 'apps/www/public/_prod/'
-  src: '<%= prod %>/tmp/*'
-  dest: '<%= prod %>'
+  files:
+    -
+      expand: true
+      cwd: '<%= prod %>/tmp/'
+      src:
+        - '**/*'
+      dest: '<%= prod %>'
 uglify:
   files:
     - 
       expand: true
       src: 
-        - '*.js'
+        - '**/*.js'
       cwd: '<%= dist %>'
       dest: '<%= prod %>/tmp/'
 cssmin:
@@ -31,9 +34,9 @@ cssmin:
     -
       expand: true
       src: 
-        - '*.css'
+        - '**/**.css'
       cwd: '<%= dist %>'
       dest: '<%= prod %>/tmp/'
 bytesize:
   src:
-    - '<%= prod %>/*'
+    - '<%= prod %>/**/*'
