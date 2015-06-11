@@ -1,4 +1,12 @@
 
+0.1.0 / 2015-06-11
+==================
+
+  * grunt dev now runs grunt default concurrently instead of before
+  * moved default aliases to aliases.yaml
+  * updated dependency versions
+
+
 0.0.12 / 2015-02-27
 ==================
 
