@@ -1,6 +1,9 @@
-aliases:
+default:
   - 'clean:dev'
   - 'scripts'
   - 'styles'
   #- 'guide'
   - 'app'
+default_watch:
+  - 'default'
+  - 'watch'
