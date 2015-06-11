@@ -1,6 +1,4 @@
 aliases:
-  - 'default'
-  - 'githooks'
   - 'concurrent:dev'
 clean:
   - '<%= dist %>'
@@ -32,8 +30,9 @@ shell:
     stdin: false
 concurrent:
   tasks: 
+    - 'githooks'
     - 'nodemon'
-    - 'watch'
+    - 'default_watch'
     - 'shell:dev'
   options:
     logConcurrentOutput: true
