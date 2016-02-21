@@ -16,7 +16,7 @@
     "rapptor"
   ],
   "peerDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": ">=0.4.0",
     "grunt-set": "0.0.2"
   },
   "dependencies": {
